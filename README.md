@@ -7,4 +7,4 @@ console.table([array.json])
 ```
 
 
- * [view the html](http://javajose.github.io/puroChino/)
+ * [view the html](http://javajose.github.io/puroChino/proj1)
