@@ -1,0 +1,124 @@
+@import "compass/css3";
+
+@import "compass/css3";
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+$background: #FEF6E1;
+$blue: #17204B;
+$glossary-term: tint(black, 15);
+
+html, body {
+  height: 100%;
+  /*background-color: $background;*/
+  background-color: blue;
+  color: white;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  @include border-radius;
+  color: $blue;
+  padding: 5px;
+}
+
+label {
+  display: block;
+}
+
+.toggle {
+  @include border-radius;
+  border: 2px solid $blue;
+  float: right;
+  padding: 5px;
+  background-color: white;
+
+  &:hover{
+    cursor: pointer;
+    background-color: darken(white, 5%);
+  }
+  &:active{
+    background-color: darken(white, 15%);
+  }
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.layout {
+  padding: 3%;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+
+  padding: 5% 0; /* Temp: Just spacing. */
+}
+
+.glossary {
+  background-color: $blue;
+  left: -100%;
+  overflow-y: scroll;
+}
+
+.glossary-terms {
+  @include border-radius;
+  background-color: $glossary-term;
+  color: white;
+  margin-bottom: 100px;
+}
+
+.term {
+  padding: 1em;
+  &:first-child {
+    @include border-top-left-radius;
+    @include border-top-right-radius;
+  }
+  &:last-child {
+    @include border-bottom-left-radius;
+    @include border-bottom-right-radius;
+  }
+  &:hover {
+    background-color: tint(black, 25%);
+  }
+}
+.wrapper.show-glossary .canvas {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.shake {
+  -webkit-animation: shake .7s 1;
+  -moz-animation: shake .7s 1;
+  -o-animation: shake .7s 1;
+  animation: shake .7s 1;
+}
+var xhr = new XMLHttpRequest(); xhr.open("GET", “http://pc.net/glossary”, false); xhr.send(); console.log("SkyDemon url: " + xhr.responseURL); console.log("SkyDemon status: " + xhr.statusText); console.log("SkyDemon ready?: " + xhr.status); console.log("SkyDemon headers: " + xhr.HEADERS_RECEIVED); console.log("SkyDemon readyState: " + xhr.readyState); console.log("SkyDemon length: " + xhr.responseText.length);
