@@ -5,4 +5,6 @@ an easy way to see this data is
 ```
 console.table([array.json])
 ```
-[]()
+
+
+ * [view the html]()
